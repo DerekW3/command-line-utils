@@ -1,4 +1,4 @@
-use clap::{Arg, Command};
+use clap::{parser::ValueSource, Arg, Command};
 
 fn main() {
     let matches = Command::new("echor")
@@ -19,5 +19,17 @@ fn main() {
         )
         .get_matches();
 
-    println!("{:#?}", matches);
+    let omit_newline = matches.value_source("omit_newline").unwrap();
+
+    let ending = match omit_newline {
+        ValueSource::CommandLine => "",
+        _ => "\n",
+    };
+
+    if let Some(text) = matches.get_many::<String>("text") {
+        let text_vec: Vec<String> = text.map(|s| s.to_string()).collect();
+        let joined_text = text_vec.join(" ");
+
+        print!("{}{}", joined_text, ending);
+    }
 }
