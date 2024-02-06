@@ -1,0 +1,10 @@
+/Users/derekwarner/repos/rust-projects/command-line-utils/catr/target/debug/deps/libfloat_cmp-d55e0b0fa6ec1023.rmeta: /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/lib.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/macros.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/ulps.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/ulps_eq.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/eq.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/ratio.rs
+
+/Users/derekwarner/repos/rust-projects/command-line-utils/catr/target/debug/deps/float_cmp-d55e0b0fa6ec1023.d: /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/lib.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/macros.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/ulps.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/ulps_eq.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/eq.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/ratio.rs
+
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/lib.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/macros.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/ulps.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/ulps_eq.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/eq.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/float-cmp-0.9.0/src/ratio.rs:
