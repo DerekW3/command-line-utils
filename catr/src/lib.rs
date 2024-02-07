@@ -23,7 +23,7 @@ pub fn get_args() -> MyResult<Config> {
         .arg(
             Arg::new("files")
                 .help("input files")
-                .required(true)
+                .default_value("-")
                 .num_args(1..),
         )
         .arg(
@@ -31,7 +31,8 @@ pub fn get_args() -> MyResult<Config> {
                 .short('n')
                 .long("number")
                 .help("Number lines including blank lines")
-                .num_args(0),
+                .num_args(0)
+                .conflicts_with("number_nonblank_lines"),
         )
         .arg(
             Arg::new("number_nonblank_lines")
