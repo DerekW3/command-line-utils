@@ -1,1 +1,0 @@
-/Users/derekwarner/repos/rust-projects/command-line-utils/catr/target/debug/catr: /Users/derekwarner/repos/rust-projects/command-line-utils/catr/src/lib.rs /Users/derekwarner/repos/rust-projects/command-line-utils/catr/src/main.rs
