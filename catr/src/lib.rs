@@ -11,12 +11,14 @@ pub struct Config {
 }
 
 pub fn run(config: Config) -> MyResult<()> {
-    dbg!(config);
+    for filename in config.files {
+        println!("{}", filename);
+    }
     Ok(())
 }
 
 pub fn get_args() -> MyResult<Config> {
-    let matches = Command::new("catr")
+    let mut matches = Command::new("catr")
         .version("0.1.0")
         .author("Derek Warner <derekw3@illinois.edu>")
         .about("A rusty cat")
@@ -43,9 +45,7 @@ pub fn get_args() -> MyResult<Config> {
         )
         .get_matches();
 
-    let files = matches.get_many::<String>("files").unwrap();
-
-    let files_vec = files.map(|s| s.to_string()).collect();
+    let files_vec: Vec<String> = matches.remove_many("files").unwrap().collect();
 
     let number: bool = matches!(
         matches.value_source("number_lines").unwrap(),
