@@ -17,21 +17,21 @@ pub fn run(config: Config) -> MyResult<()> {
         match open(&filename) {
             Err(e) => eprintln!("Failed to open {}: {}", filename, e),
             Ok(file) => {
-                let mut line_number = 1;
-                for line in file.lines() {
-                    let line_unwrapped = line.unwrap();
+                let mut last_number = 0;
+                for (line_number, line) in file.lines().enumerate() {
+                    let line = line?;
+
                     if config.number_lines {
-                        println!("{:>6}\t{}", line_number, line_unwrapped);
-                        line_number += 1;
+                        println!("{:>6}\t{}", line_number + 1, line);
                     } else if config.number_nonblank_lines {
-                        if line_unwrapped.is_empty() {
-                            println!("{}", line_unwrapped);
+                        if !line.is_empty() {
+                            last_number += 1;
+                            println!("{:>6}\t{}", last_number, line);
                         } else {
-                            println!("{:>6}\t{}", line_number, line_unwrapped);
-                            line_number += 1;
+                            println!();
                         }
                     } else {
-                        println!("{}", line_unwrapped);
+                        println!("{}", line);
                     }
                 }
             }
