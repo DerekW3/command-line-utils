@@ -17,19 +17,17 @@ pub fn run(config: Config) -> MyResult<()> {
         match open(&filename) {
             Err(e) => eprintln!("Failed to open {}: {}", filename, e),
             Ok(file) => {
-                println!("Opened {}", filename);
-
                 let mut line_number = 1;
                 for line in file.lines() {
                     let line_unwrapped = line.unwrap();
                     if config.number_lines {
-                        println!("{}  {}", line_number, line_unwrapped);
+                        println!("     {}	{}", line_number, line_unwrapped);
                         line_number += 1;
                     } else if config.number_nonblank_lines {
                         if line_unwrapped.is_empty() {
                             println!("{}", line_unwrapped);
                         } else {
-                            println!("{}  {}", line_number, line_unwrapped);
+                            println!("     {}	{}", line_number, line_unwrapped);
                             line_number += 1;
                         }
                     } else {
