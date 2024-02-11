@@ -21,13 +21,13 @@ pub fn run(config: Config) -> MyResult<()> {
                 for line in file.lines() {
                     let line_unwrapped = line.unwrap();
                     if config.number_lines {
-                        println!("     {}	{}", line_number, line_unwrapped);
+                        println!("{:>6}\t{}", line_number, line_unwrapped);
                         line_number += 1;
                     } else if config.number_nonblank_lines {
                         if line_unwrapped.is_empty() {
                             println!("{}", line_unwrapped);
                         } else {
-                            println!("     {}	{}", line_number, line_unwrapped);
+                            println!("{:>6}\t{}", line_number, line_unwrapped);
                             line_number += 1;
                         }
                     } else {
