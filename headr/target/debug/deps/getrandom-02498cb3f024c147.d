@@ -1,0 +1,10 @@
+/Users/derekwarner/repos/rust-projects/command-line-utils/headr/target/debug/deps/libgetrandom-02498cb3f024c147.rmeta: /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/lib.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/error.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/util.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/error_impls.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/util_libc.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/macos.rs
+
+/Users/derekwarner/repos/rust-projects/command-line-utils/headr/target/debug/deps/getrandom-02498cb3f024c147.d: /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/lib.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/error.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/util.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/error_impls.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/util_libc.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/macos.rs
+
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/lib.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/error.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/util.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/error_impls.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/util_libc.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.12/src/macos.rs:
