@@ -1,0 +1,1 @@
+/Users/derekwarner/repos/rust-projects/command-line-utils/headr/target/debug/headr: /Users/derekwarner/repos/rust-projects/command-line-utils/headr/src/lib.rs /Users/derekwarner/repos/rust-projects/command-line-utils/headr/src/main.rs

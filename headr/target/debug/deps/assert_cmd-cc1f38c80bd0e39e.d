@@ -1,0 +1,14 @@
+/Users/derekwarner/repos/rust-projects/command-line-utils/headr/target/debug/deps/libassert_cmd-cc1f38c80bd0e39e.rmeta: /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/lib.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/assert.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/cargo.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/cmd.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/output.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/color.rs /Users/derekwarner/repos/rust-projects/command-line-utils/headr/target/debug/build/assert_cmd-49b1824617f376a9/out/current_target.txt /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/../README.md
+
+/Users/derekwarner/repos/rust-projects/command-line-utils/headr/target/debug/deps/assert_cmd-cc1f38c80bd0e39e.d: /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/lib.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/assert.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/cargo.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/cmd.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/output.rs /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/color.rs /Users/derekwarner/repos/rust-projects/command-line-utils/headr/target/debug/build/assert_cmd-49b1824617f376a9/out/current_target.txt /Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/../README.md
+
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/lib.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/assert.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/cargo.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/cmd.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/output.rs:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/color.rs:
+/Users/derekwarner/repos/rust-projects/command-line-utils/headr/target/debug/build/assert_cmd-49b1824617f376a9/out/current_target.txt:
+/Users/derekwarner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-2.0.14/src/../README.md:
+
+# env-dep:OUT_DIR=/Users/derekwarner/repos/rust-projects/command-line-utils/headr/target/debug/build/assert_cmd-49b1824617f376a9/out
