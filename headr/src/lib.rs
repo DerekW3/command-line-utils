@@ -74,10 +74,20 @@ pub fn get_args() -> MyResult<Config> {
         }
     }
 
+    let mut number_bytes: Option<usize> = None;
+    if number_bytes_flag {
+        let input_bytes_string: String = matches.remove_one("bytes").unwrap();
+        let input_number_bytes = parse_positive_int(&input_bytes_string);
+        match input_number_bytes {
+            Ok(num) => number_bytes = Some(num),
+            Err(e) => return Err(e),
+        }
+    }
+
     Ok(Config {
         files: files_vec,
         lines: number_lines,
-        bytes: Some(10),
+        bytes: number_bytes,
     })
 }
 
