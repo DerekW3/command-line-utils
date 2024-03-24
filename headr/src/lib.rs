@@ -18,7 +18,21 @@ pub fn run(config: Config) -> MyResult<()> {
     for filename in config.files {
         match open(&filename) {
             Err(e) => eprintln!("{}: {}", filename, e),
-            Ok(_) => println!("Opened {}", filename),
+            Ok(file) => {
+                println!("==> {} <==", filename);
+                match config.bytes {
+                    Some(_) => println!("Bytes running"),
+                    None => {
+                        for (line_number, line) in file.lines().enumerate() {
+                            let line = line?;
+                            if line_number == config.lines {
+                                break;
+                            }
+                            println!("{}", line);
+                        }
+                    }
+                }
+            }
         }
     }
     Ok(())
@@ -65,6 +79,7 @@ pub fn get_args() -> MyResult<Config> {
                 .value_name("BYTES")
                 .help("Number of bytes")
                 .num_args(1)
+                .default_value("10")
                 .conflicts_with("number_lines"),
         )
         .get_matches();
