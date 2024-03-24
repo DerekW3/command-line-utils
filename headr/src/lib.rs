@@ -29,7 +29,7 @@ pub fn get_args() -> MyResult<Config> {
         .about("A rusty head")
         .arg(
             Arg::new("files")
-                .help("input files")
+                .help("Input file(s)")
                 .default_value("-")
                 .num_args(1..),
         )
@@ -37,18 +37,20 @@ pub fn get_args() -> MyResult<Config> {
             Arg::new("number_lines")
                 .short('n')
                 .long("lines")
-                .help("number of lines to print")
+                .value_name("LINES")
+                .help("Number of lines")
                 .num_args(1)
-                .default_value("10")
-                .conflicts_with("bytes"),
+                .default_value("10"),
         )
         .arg(
             Arg::new("bytes")
                 .short('c')
                 .long("bytes")
-                .help("number of bites to print")
+                .value_name("BYTES")
+                .help("Number of bytes")
                 .default_value("10")
-                .num_args(1),
+                .num_args(1)
+                .conflicts_with("number_lines"),
         )
         .get_matches();
 
@@ -70,7 +72,7 @@ pub fn get_args() -> MyResult<Config> {
         let input_number_lines = parse_positive_int(&input_number_string);
         match input_number_lines {
             Ok(num) => number_lines = num,
-            Err(e) => return Err(e),
+            Err(e) => return Err(e).map_err(|e| format!("illegal line count -- {}", e))?,
         }
     }
 
@@ -80,7 +82,7 @@ pub fn get_args() -> MyResult<Config> {
         let input_number_bytes = parse_positive_int(&input_bytes_string);
         match input_number_bytes {
             Ok(num) => number_bytes = Some(num),
-            Err(e) => return Err(e),
+            Err(e) => return Err(e).map_err(|e| format!("illegal byte count -- {}", e))?,
         }
     }
 
