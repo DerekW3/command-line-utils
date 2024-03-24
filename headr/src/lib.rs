@@ -47,8 +47,8 @@ pub fn get_args() -> MyResult<Config> {
                 .short('c')
                 .long("bytes")
                 .help("number of bites to print")
-                .num_args(1)
-                .default_value("10"),
+                .default_value("10")
+                .num_args(1),
         )
         .get_matches();
 
@@ -64,7 +64,7 @@ pub fn get_args() -> MyResult<Config> {
         ValueSource::CommandLine
     );
 
-    let mut number_lines: usize = 0;
+    let mut number_lines: usize = 10;
     if number_lines_flag {
         let input_number_string: String = matches.remove_one("number_lines").unwrap();
         let input_number_lines = parse_positive_int(&input_number_string);
