@@ -15,23 +15,33 @@ pub struct Config {
 }
 
 pub fn run(config: Config) -> MyResult<()> {
+    let mut file_count = 0;
+    let num_files = config.files.len();
     for filename in config.files {
         match open(&filename) {
             Err(e) => eprintln!("{}: {}", filename, e),
-            Ok(file) => {
-                println!("==> {} <==", filename);
+            Ok(mut file) => {
+                if file_count != 0 {
+                    println!();
+                }
+                if num_files > 1 {
+                    println!("==> {} <==", filename);
+                }
                 match config.bytes {
                     Some(_) => println!("Bytes running"),
                     None => {
-                        for (line_number, line) in file.lines().enumerate() {
-                            let line = line?;
-                            if line_number == config.lines {
+                        let mut line = String::new();
+                        for _ in 0..config.lines {
+                            let bytes = file.read_line(&mut line)?;
+                            if bytes == 0 {
                                 break;
                             }
-                            println!("{}", line);
+                            print!("{}", line);
+                            line.clear();
                         }
                     }
                 }
+                file_count += 1;
             }
         }
     }
