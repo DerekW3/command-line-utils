@@ -1,5 +1,9 @@
 use clap::{parser::ValueSource, Arg, Command};
-use std::{error::Error, result};
+use std::fs::File;
+use std::{
+    error::Error,
+    io::{self, BufRead, BufReader},
+};
 
 type MyResult<T> = Result<T, Box<dyn Error>>;
 
@@ -11,8 +15,20 @@ pub struct Config {
 }
 
 pub fn run(config: Config) -> MyResult<()> {
-    println!("{:#?}", config);
+    for filename in config.files {
+        match open(&filename) {
+            Err(e) => eprintln!("{}: {}", filename, e),
+            Ok(_) => println!("Opened {}", filename),
+        }
+    }
     Ok(())
+}
+
+fn open(filename: &str) -> MyResult<Box<dyn BufRead>> {
+    match filename {
+        "-" => Ok(Box::new(BufReader::new(io::stdin()))),
+        _ => Ok(Box::new(BufReader::new(File::open(filename)?))),
+    }
 }
 
 pub fn parse_positive_int(val: &str) -> MyResult<usize> {
@@ -48,7 +64,6 @@ pub fn get_args() -> MyResult<Config> {
                 .long("bytes")
                 .value_name("BYTES")
                 .help("Number of bytes")
-                .default_value("10")
                 .num_args(1)
                 .conflicts_with("number_lines"),
         )
