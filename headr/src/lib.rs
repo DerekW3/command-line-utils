@@ -2,7 +2,7 @@ use clap::{parser::ValueSource, Arg, Command};
 use std::fs::File;
 use std::{
     error::Error,
-    io::{self, BufRead, BufReader},
+    io::{self, BufRead, BufReader, Read},
 };
 
 type MyResult<T> = Result<T, Box<dyn Error>>;
@@ -28,7 +28,13 @@ pub fn run(config: Config) -> MyResult<()> {
                     println!("==> {} <==", filename);
                 }
                 match config.bytes {
-                    Some(_) => println!("Bytes running"),
+                    Some(bytes) => {
+                        let mut handle = file.take(bytes as u64);
+                        let mut buffer = vec![0; bytes];
+                        let bytes_read = handle.read(&mut buffer)?;
+
+                        print!("{}", String::from_utf8_lossy(&buffer[..bytes_read]));
+                    }
                     None => {
                         let mut line = String::new();
                         for _ in 0..config.lines {
