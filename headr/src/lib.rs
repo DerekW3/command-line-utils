@@ -29,11 +29,9 @@ pub fn run(config: Config) -> MyResult<()> {
                 }
                 match config.bytes {
                     Some(bytes) => {
-                        let mut handle = file.take(bytes as u64);
-                        let mut buffer = vec![0; bytes];
-                        let bytes_read = handle.read(&mut buffer)?;
+                        let bytes = file.bytes().take(bytes).collect::<Result<Vec<_>, _>>();
 
-                        print!("{}", String::from_utf8_lossy(&buffer[..bytes_read]));
+                        print!("{}", String::from_utf8_lossy(&bytes?));
                     }
                     None => {
                         let mut line = String::new();
